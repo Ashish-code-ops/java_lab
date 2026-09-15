@@ -1,28 +1,65 @@
-import javax.swing.*;
-public class Cviews extends JFrame{
-    JLabel a, b, result;
-    JTextField num1, num2;
-    JButton add, sub, divide, multiply;
-    Cviews(){
+package MVC_Calculator;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+
+
+public class Cview extends JFrame{
+
+    JLabel a, b, res;
+    JTextField txtA, txtB, txtRes;
+    JButton add, sub, mul, div;
+
+    public Cview() {
+        setTitle("Calculator");
         setSize(500, 500);
         setLayout(null);
-        setTitle("CALCULATOR");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        a = new JLabel("Enter A");
-        a.setBounds(30, 30, 100, 30);
+        a = new JLabel("ENTER A:");
+        a.setBounds(50, 50, 100, 30);
         add(a);
-        b = new JLabel("Enter B");
-        b.setBounds(30, 60, 100, 30);
+
+        b = new JLabel("ENTER B:");
+        b.setBounds(50, 100, 100, 30);
         add(b);
 
-        num1 = new JTextField("");
-        num1.setBounds(80, 30, 100, 30);
-        add(num1);
-        num2 = new JTextField("");
-        num2.setBounds(80, 60, 100, 30);
-        add(num2);
-        setVisible(true);
+        res = new JLabel("Result:");
+        res.setBounds(50, 150, 100, 30);
+        add(res);
 
+        txtA = new JTextField();
+        txtA.setBounds(150, 50, 200, 30);
+        add(txtA);
+
+        txtB = new JTextField();
+        txtB.setBounds(150, 100, 200, 30);
+        add(txtB);
+
+        txtRes = new JTextField();
+        txtRes.setBounds(150, 150, 200, 30);
+        txtRes.setEditable(false);
+        add(txtRes);
+
+        add = new JButton("+");
+        add.setBounds(50, 200, 80, 30);
+        add(add);
+
+        sub = new JButton("-");
+        sub.setBounds(150, 200, 100, 30);
+        add(sub);
+
+        mul = new JButton("*");
+        mul.setBounds(270, 200, 100, 30);
+        add(mul);
+
+        div = new JButton("/");
+        div.setBounds(390, 200, 100, 30);
+        add(div);
+
+        setVisible(true);
     }
+
+    
 }
